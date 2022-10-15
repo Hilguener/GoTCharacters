@@ -28,7 +28,7 @@ class CharListAdapter(val charClick: (Int) -> Unit): RecyclerView.Adapter<CharLi
 
     override fun onBindViewHolder(holder: SearchViewHolder, position: Int){
         val char = charList[position]
-        holder.itemView.charText.text = "${position + 1} - ${char.firstName +" "+ char.lastName}"
+        holder.itemView.charText.text = "${char.firstName +" "+ char.lastName}"
 
         holder.itemView.setOnClickListener{ charClick (char.id)}
     }
