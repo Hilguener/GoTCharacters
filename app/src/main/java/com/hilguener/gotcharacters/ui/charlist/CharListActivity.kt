@@ -2,6 +2,7 @@ package com.hilguener.gotcharacters.ui.charlist
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -18,9 +19,12 @@ class CharListActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_charlist)
 
+
         viewModel = ViewModelProvider(this).get(CharListViewModel::class.java)
 
         initUI()
+
+
     }
     private fun initUI(){
         charlistRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -36,4 +40,6 @@ class CharListActivity : AppCompatActivity(){
         }
         )
     }
+
+
 }
