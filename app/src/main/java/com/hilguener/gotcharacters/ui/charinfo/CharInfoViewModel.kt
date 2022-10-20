@@ -36,7 +36,6 @@ class CharInfoViewModel() : ViewModel() {
                 call.cancel()
             }
         })
-
     }
 }
 
