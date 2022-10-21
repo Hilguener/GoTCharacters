@@ -2,7 +2,7 @@ package com.hilguener.gotcharacters.ui.charinfo
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.hilguener.gotcharacters.model.api.Char
+
 import com.hilguener.gotcharacters.model.api.CharactersResponseItem
 import com.hilguener.gotcharacters.service.GotApiService
 import retrofit2.Call

@@ -6,6 +6,7 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hilguener.gotcharacters.R
 import com.hilguener.gotcharacters.ui.charinfo.CharInfoActivity
@@ -27,7 +28,7 @@ class CharListActivity : AppCompatActivity(){
 
     }
     private fun initUI(){
-        charlistRecyclerView.layoutManager = LinearLayoutManager(this)
+        charlistRecyclerView.layoutManager = GridLayoutManager(this,2)
         charlistRecyclerView.adapter = CharListAdapter{
             val intent = Intent(this, CharInfoActivity::class.java)
             intent.putExtra("id", it)
